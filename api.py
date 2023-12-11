@@ -9,7 +9,7 @@ longitude=[]
 distance=[]
 current=(30.250574, 77.047322)
 # Specify the path to your Excel file
-excel_file_path = 'E:\Projects\Women Safety Trials\Police Info API\data.xlsx'
+excel_file_path = 'data.xlsx'
 
 # Read the Excel file into a pandas DataFrame
 df = pd.read_excel(excel_file_path)
