@@ -1,7 +1,7 @@
 import pandas as pd
 from geopy.distance import geodesic as gd
 from flask import Flask,jsonify,request
-app=Flask("Test API")
+app=Flask(__name__)
 
 ct=0
 lattitude=[]
@@ -9,7 +9,7 @@ longitude=[]
 distance=[]
 current=(30.250574, 77.047322)
 # Specify the path to your Excel file
-excel_file_path = 'data.xlsx'
+excel_file_path = 'E:\Projects\Women Safety Trials\Police Info API\data.xlsx'
 
 # Read the Excel file into a pandas DataFrame
 df = pd.read_excel(excel_file_path)
@@ -76,5 +76,5 @@ def calcDistance():
     return jsonify({'Nearest Station' : station1 ,"Officer Incharge": incharge1,"Contact Number":contact1
 
     },{'Nearest Station' : station2 ,"Officer Incharge": incharge2,"Contact Number":contact2})
-app.run(debug=True)
+app.run()
 # calcDistance(current)
