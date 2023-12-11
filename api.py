@@ -76,5 +76,5 @@ def calcDistance():
     return jsonify({'Nearest Station' : station1 ,"Officer Incharge": incharge1,"Contact Number":contact1
 
     },{'Nearest Station' : station2 ,"Officer Incharge": incharge2,"Contact Number":contact2})
-app.run()
+app.run(host='0.0.0.0', port=5000)
 # calcDistance(current)
